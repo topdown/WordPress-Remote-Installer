@@ -11,10 +11,10 @@ define( 'WPRI_VERSION' , '0.2' );
 $suggestions = array(
 
   # Can be an Array of URLs for each Plugin, or a string URL for a text file with URLs for each Plugin on a new line
-  'plugins' => 'http://lucanos.github.io/WordPress-Remote-Installer/list-plugin.txt' ,
+  'plugins' => 'http://wpup.us/info/WRI/vetted-plugins.txt' ,
 
  # Can be an Array of URLs for each Theme, or a string URL for a text file with URLs for each Theme on a new line
-  'themes'  => 'http://lucanos.github.io/WordPress-Remote-Installer/list-theme.txt'
+  'themes'  => 'http://wpup.us/info/WRI/vetted-themes.txt'
 
 );
 
@@ -105,7 +105,7 @@ function downloadFromURL( $url = null , $local = null ){
   return $result;
 }
 function getGithubVersion(){
-  $versionURL = 'https://lucanos.github.io/WordPress-Remote-Installer/version.txt';
+  $versionURL = 'https://wpup.us/info/WRI/version.txt';
   $remoteVersion = null;
   if( !( $remoteVersion = @file_get_contents( $versionURL ) )
       && function_exists( 'curl_init' ) ){
